@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="start"> <!--그레비티 스타트 해주지않으면 항상 열려있음-->
+
+    <RelativeLayout
+        android:id="@+id/nav_header"
+        android:layout_width="918px"
+        android:layout_height="400px"
+        android:background="@drawable/bg_bestfood_drawer">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:src="@drawable/ic_person"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="0sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginLeft="20sp"/>
+        <TextView
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:text="최윤선"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_below="@id/profile_icon"
+            android:gravity="center"
+            android:layout_marginLeft="20sp"/>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_menu"
+        android:layout_width="918px"
+        android:layout_height="match_parent"
+        app:menu="@menu/menu_nav"
+        android:layout_below="@id/nav_header"
+        android:elevation="5sp"/>
+
+</RelativeLayout>
